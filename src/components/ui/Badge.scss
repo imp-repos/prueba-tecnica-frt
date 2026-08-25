@@ -1,0 +1,26 @@
+@use '../../styles/tokens' as *;
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $spacing-4;
+  padding: 2px $spacing-8;
+  border-radius: $radius-badge;
+  font-size: 12px;
+  font-weight: $weight-body-4;
+
+  &--positive {
+    background-color: $color-semantic-subtle-success;
+    color: $color-semantic-success;
+  }
+
+  &--negative {
+    background-color: $color-semantic-subtle-error;
+    background-color: $color-semantic-subtle-warning;
+    color: $color-semantic-warning;
+  }
+
+  &__icon {
+    font-size: 10px;
+  }
+}

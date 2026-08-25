@@ -1,0 +1,96 @@
+@use '../styles/tokens' as *;
+
+.investment-mix-card {
+  background: $color-background-card;
+  border-radius: $radius-card;
+  padding: $spacing-24;
+  box-shadow: 0 1px 2px rgba(13, 13, 53, 0.02);
+  border: 1px solid $color-gray-alabaster;
+  height: 100%;
+
+  &__title {
+    margin: 0 0 $spacing-20 0;
+    font-size: 14px;
+    font-weight: $weight-heading-3;
+    color: $color-text-primary;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    color: $color-text-muted;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: $spacing-8;
+    border-bottom: 1px solid $color-gray-alabaster;
+    margin-bottom: $spacing-16;
+
+    .col-valores {
+      .spacing {
+        display: inline-block;
+        width: 16px;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+}
+
+.investment-item {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-8;
+  padding-bottom: $spacing-16;
+  border-bottom: 1px solid $color-gray-alabaster;
+
+  &:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .canal-name {
+      font-size: $size-body-3; 
+      font-weight: $weight-heading-3; 
+      color: $color-text-primary;
+    }
+
+    .canal-values {
+      font-size: 12px;
+      color: $color-text-muted;
+
+      .separator {
+        margin: 0 $spacing-8;
+        color: $color-gray-timberwolf;
+      }
+
+      .percentage {
+        font-weight: $weight-heading-1;
+        color: $color-text-primary;
+      }
+    }
+  }
+
+  &__progress-bg {
+    width: 100%;
+    height: 6px;
+    background-color: #EAEAEA;
+    border-radius: $radius-pill;
+    overflow: hidden;
+  }
+
+  &__progress-fill {
+    height: 100%;
+    background-color: $color-charts-comparative-majorelle;
+    border-radius: $radius-pill;
+  }
+}

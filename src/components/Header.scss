@@ -1,0 +1,113 @@
+@use '../styles/tokens' as *;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-24;
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $color-background-navbar;
+  padding: $spacing-24;
+  border-bottom: 1px solid $color-gray-alabaster;
+  margin-bottom: $spacing-20;
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+    gap: $spacing-8;
+
+    h1 {
+      margin: 0;
+      font-size: $size-heading-3;
+      font-weight: $weight-heading-1;
+      color: $color-navy;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  .header__budget {
+    font-size: $size-body-3;
+
+    .label {
+      color: $color-text-muted;
+    }
+    
+    .value {
+      font-weight: $weight-heading-3;
+      color: $color-charts-blue-royal-azure;
+      margin-left: $spacing-4;
+    }
+  }
+}
+
+.header__filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 $spacing-24;
+
+  .header__right-filters {
+    display: flex;
+    align-items: center;
+    gap: $spacing-32;
+
+    .month-selector {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: $color-primary-white;
+      border: 1px solid #EAEAEA;
+      border-radius: 8px;
+      width: 126px;
+      height: 32px;
+      padding: 0 12px;
+      box-sizing: border-box;
+
+      &__btn {
+        background: none;
+        border: none;
+        color: $color-gray-silver;
+        cursor: pointer;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $size-body-3;
+        font-weight: $weight-heading-3;
+
+        &:hover:not(:disabled) {
+          color: $color-navy;
+        }
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      &__current {
+        font-weight: $weight-body-4;
+        color: $color-gray-silver;
+        font-size: $size-body-3;
+        min-width: 60px;
+        text-align: center;
+      }
+    }
+
+    .platform-selector {
+      display: flex;
+      align-items: center;
+      gap: $spacing-12;
+
+      &__label {
+        font-size: $size-body-3;
+        color: $color-text-muted;
+      }
+    }
+  }
+}

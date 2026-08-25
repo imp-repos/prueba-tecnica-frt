@@ -1,0 +1,49 @@
+@use '../styles/tokens' as *;
+
+.kpi-card {
+  width: 301px;
+  height: 109px;
+  gap: 10px;
+  border-radius: 8px;
+  border: 1px solid #D2D2D2;
+  padding: 8px 11px;
+  background-color: #FCFCFC;
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    font-weight: $weight-body-4;
+    letter-spacing: 0.5px;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__value {
+    font-size: $size-display-3;
+    font-weight: $weight-heading-2;
+    color: $color-text-primary;
+    line-height: 1;
+  }
+
+  &__subtext {
+    font-size: 12px;
+    color: $color-text-muted;
+  }
+}
